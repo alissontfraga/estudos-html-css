@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+<body>
+    <h1>Trabalhando com listas</h1>
+    <h2>Listas ordenadas</h2> <!-- em que a ordem faz diferença-->
+    <ol> <!-- comando ordered list-->
+    <li> acordar</li> <!-- para listar-->
+    <li> tomar café</li>
+    <li> escovar os dentes <!-- opcional tag de fechamento-->
+    <li> lavar roupa</li>
+    
+    <!--A tag <ol> possui um parâmetro type, onde configuramos o tipo de marcador da lista
+atual. As opções de valores para esse parâmetro são:
+‣ 1 - Valor padrão. Cria listas numeradas. Ex: 1, 2, 3, 4, …
+‣ A - Cria listas alfabéticas em maiúsculas. Ex: A, B, C, D, …
+‣ a - Cria listas alfabéticas em minúsculas. Ex: a, b, c, d, …
+‣ I - Cria listas com algarismos romanos em maiúsculas. Ex: I, II, III, IV, …
+‣ i - Cria listas com algarismos romanos em minúsculas. Ex: i, ii, iii, iv, …
+
+Você também pode indicar o início da contagem usando o parâmetro start.
+Por exemplo, a tag <ol type=“I” start = “5”> vai gerar itens numerados como V,
+VI, VII, VIII, IX, … 
+-->
+</ol>
+<h2>Listas não ordenadas</h2> <!-- ordem nao importa- unordered list-->
+<ul>
+    <li>pão</li>
+    <li>Leite</li>
+    <li>Tomate</li>
+    <li>arroz</li> 
+    
+</ul>
+<h2>Minhas linguagens favoritas</h2>
+<ol></ol>
+    <li>antigas</li>
+    <ol type="a">
+        <li>clipper</li>
+        <li>visual basic</li>
+        <li>delphi</li>
+
+    </ol>
+    <li>novas</li>
+    <ol type="a" start="5"> <!--tem que ser um numero (no caso pra começar da letra e)-->
+        <li>PHP</li>
+        <li>python</li>
+        <li>JavaScript</li>
+    </ol>
+</ol>
+<h2>Meus jogos favoritos</h2>
+<ol>
+    <li>NES</li>
+    <ul>
+    <li>Mario Bros</li>
+    <ul type= circle>
+        <li>Mario bros 1</li>
+        <li>Mario bros 3</li>
+
+    </ul>
+    <li>Ninja gaiden</li>
+    </ul>
+    <li>SNES</li>
+    <ul>
+        <li>Mario</li>
+        <li>Super bomberman</li>
+    </ul>
+    <li>Playstation</li>
+    <ul type="square">
+        <li>final fantasy</li>
+        <li>castlevania</li>
+
+
+    </ul>
+    <h2>Lista de definições</h2>
+   <!-- <dl> <-- definition list->
+        <dt>Termo</dt> 
+        <dd>Descrição</dd>
+    </dl>  google valoriza sites que tem definição
+    -->
+    <dl>
+        <dt>HTML</dt>
+        <dd>linguagem de marcação para a criação de conteúdo de um site.</dd>
+        <dt>CSS</dt>
+        <dd>linguagem de marcação para a criaçào do design de um site.</dd>
+        <dt>JavaScript</dt>
+        <dd>Linguagem de programação para a criação de interatividade de um site.</dd>
+    </dl>
+</ol>
+</body>
+</html>
+<!-- Para quem está vendo o vídeo agora, eu dei uma olhada na documentação MDN que o VsCode sempre recomenda e o parâmetro "type" dentro do <ul> ou <ol> está ultrapassado. O correto é colocar esse parâmetro dentro das CSS. Fica mais ou menos assim:
+
+    <style> 
+           ol {
+                list-style-type: 1;
+           }
+    
+           ul {
+               list-style-type: circle;
+           }
+    </style>
