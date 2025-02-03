@@ -12,7 +12,7 @@
 </head>
 <body>
     <h1>Meu primeiro formulário</h1>
-    <form action="cadastro.php" autocomplete="off"
+    <form action="cadastro.php"  method="post" autocomplete="off"></form> <!-- Usar GET quando informações não forem sensíveis / ou quando quero links compartilháveis / se usar envio de arquivos precisa usar o post -->
         <p><label for="inome">Nome: </label> <!-- for - colocar o id -->
             <input type="text" name="nome" id="inome"></p>
         <p><label for="isobrenome">Sobrenome:</label> 
