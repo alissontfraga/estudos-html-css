@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/* Versão para as demais mídias */
+
+/* Typical device breakpoins
+-----------------------------
+pequenos celulares: até 600px
+celulares: 600px até 768px
+tablets: 768px até 992px
+PCs: 992px até 1200px
+TVs: 1200px pra cima
+ */
+
+@media print {/* Impressora */
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    body{
+        background-image: url(../imagens/back-print.jpg); /* Desnecessário, não imprime */
+    }
+    main{
+        border: 2px solid black;
+    }
+    main::after{
+        content: 'Essa impressão foi feita através do site alisso';
+        text-decoration: overline;
+        font-size: 0.6em;
+    }
+    main h1{
+        text-shadow: none;
+        color: black;
+    }
+    img#phone {display:none}
+    img#tablet{display: none}
+    img#impressora{display: block;}
+    img#pc{display: none;}
+    img#tv{display: none;}  
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) { /* Tablet */
+    body{
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    img#phone {display:none}
+    img#tablet{display: block}
+    img#impressora{display: none;}
+    img#pc{display: none;}
+    img#tv{display: none;}  
+}
+
+@media screen and (min-width: 992px) and (max-width:1200px) {/* PCs */
+    body{
+        background-image: url(../imagens/back-pc.jpg);
+        
+       
+    }
+    img#phone {display:none}
+    img#tablet{display: none}
+    img#impressora{display: none;}
+    img#pc{display: block;}
+    img#tv{display: none;}  
+    
+}
+@media screen and (min-width: 1200px) {/* TVs */
+    body{
+        background-image: url(../imagens/back-tv.jpg);
+        
+    }
+    img#phone {display:none}
+    img#tablet{display: none}
+    img#impressora{display: none;}
+    img#pc{display: none;}
+    img#tv{display: block;}  
+    
+    
+}
